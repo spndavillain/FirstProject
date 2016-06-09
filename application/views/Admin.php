@@ -171,16 +171,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <li class="addNewsTab " style="display:none;"><a data-toggle="tab" href="#menu1">New News</a></li>
       <li class="previewTab " style="display:none;" ><a data-toggle="tab" href="#menu2">Preview News</a></li>
       <li class="editTab " style="display:none;"><a data-toggle="tab" href="#menu3">Edit News</a></li>
-      <!--|||||||BUTTON TO BE AWARE OF ||||||-->
-      
-      <!--|||||||BUTTON TO BE AWARE OF ||||||-->
-      
+
     </ul>
-    <!--|||||||TABS CONTENT RIGHT HERE||||||-->
+
+<!--|||||||||||||||||||||||||||||||||||||||||||| MY TAB CONTENT |||||||||||||||||||||||||||||||||||||||||||-->
+<!--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+    |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
 
 <div class="tab-content">
 
-<!--|||||||TABS CONTENT ****HOME**** ||||||-->
+
 
     <div id="home" class="tab-pane fade in active">
             
@@ -205,6 +205,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </form>
             </div>
 
+<!--|||||||||||||||||||||||||||||||||||||||| DISPLAY TABLE FOR NEWS |||||||||||||||||||||||||||||||||||||||-->
+<!--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+    |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
 
 <div class="delete">
       <div class="col-md-offset-2 col-md-7 search-result well mytable">
@@ -251,7 +254,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
   </div>
 
-<!--|||||||TABS CONTENT ****ONE**** ||||||-->
+<!--|||||||||||||||||||||||||||||| DISPLAY CONTENT WHEN ADDING NEWS |||||||||||||||||||||||||||||||||||||||-->
+<!--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+    |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
 
 <div id="menu1" class="tab-pane fade ">
     <div class="col-md-offset-4 col-md-4 col-md-offset-4 fill well">
@@ -286,7 +291,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
 </div>
 
-<!--|||||||TABS CONTENT ****TWO**** ||||||-->
+<!--|||||||||||||||||||||||||||||||||||||||| DISPLAY VIEW BY USING AJEX |||||||||||||||||||||||||||||||||||-->
+<!--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+    |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
 
 <div><br><br>
 <div id="menu2" class="tab-pane fade previewTab  preview-tab">
@@ -297,23 +304,34 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 </div>
 </div>
-<!--|||||||TABS CONTENT ****THREE**** ||||||-->
-<div id="menu3" class="tab-pane fade ">
-<br><br>
+
+<!--|||||||||||||||||||||||||||||||| DISPLAY TABLE FOR EDITING NEWS |||||||||||||||||||||||||||||||||||||||-->
+<!--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+    |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
+
+
+<div id="menu3" class="tab-pane fade "><br><br>
     <div class="edit-tab">
     
 
 
     </div>
 </div>
-
-
+</div>
+<!--|||||||||||||||||||||||||||||||||||||||||||||||| END ||||||||||||||||||||||||||||||||||||||||||||||||||-->
+<!--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+    |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
 
 <script type="text/javascript" src="<?=base_url("assets/js/jquery-1.12.3.min.js"); ?>"></script>
 <script type="text/javascript" src="<?php echo base_url("assets/js/tinymce/tinymce.min.js"); ?>"></script>
 <script type="text/javascript">tinymce.init({selector: "#mytextarea"});</script>
 <script type="text/javascript" src="<?php echo base_url("assets/js/bootstrap.min.js"); ?>"></script>
 <script type="text/javascript" src="<?=base_url('assets/js/script.js')?>"></script>
+
+<!--|||||||||||||||||||||||||||||||||||||||| DISPLAY TABLE FOR NEWS |||||||||||||||||||||||||||||||||||||||-->
+<!--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+    |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
+
 <script>
   $('.carousel').carousel({
     interval:5000

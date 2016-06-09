@@ -31,11 +31,14 @@
     <td><?= $idState;?>&nbsp&nbsp&nbsp&nbsp
 
     <td>
-    <?=anchor("MainController/preview/$row->idNews", "Preview")?>
-    &nbsp&nbsp
-    <?= anchor("MainController/edit/$row->idNews", 'Edit');?>
-    &nbsp&nbsp
-    <?= anchor("MainController/delete/$row->idNews", 'Delete');?>
+    <a class="preview-link"  data-action="<?php echo base_url('index.php/MainController/preview')."/".$row->idNews; ?>" onmouseover="" style="cursor: pointer;">View</a>
+
+
+
+                <a class="edit-link"  data-action="<?php echo base_url('index.php/MainController/edit')."/".$row->idNews; ?>" onmouseover="" style="cursor: pointer;">Edit</a>
+
+
+                <a class="delete-link" data-action= "<?php echo base_url('index.php/MainController/delete')."/".$row->idNews;?>"onmouseover="" style="cursor: pointer;"> Delete</a>
 
     </td>
   </tr>

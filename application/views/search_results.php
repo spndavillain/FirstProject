@@ -20,15 +20,15 @@
                 <!-- Glyphicon -->
                 <td>
 
-                <?=anchor("MainController/preview/$row->idNews", "Preview");?>
+                <a class="preview-link1"  data-action="<?php echo base_url('index.php/MainController/preview')."/".$row->idNews; ?>" onmouseover="" style="cursor: pointer;">View</a>
 
-                &nbsp&nbsp
 
-                <?= anchor("MainController/edit/$row->idNews", 'Edit');?>
 
-                &nbsp&nbsp
+                <a class="edit-link2"  data-action="<?php echo base_url('index.php/MainController/edit')."/".$row->idNews; ?>" onmouseover="" style="cursor: pointer;">Edit</a>
 
-                <?= anchor("MainController/delete/$row->idNews", 'Delete');?>
+
+
+                <a class="delete-link3" data-action= "<?php echo base_url('index.php/MainController/delete')."/".$row->idNews;?>"onmouseover="" style="cursor: pointer;"> Delete</a>
 
                 </td>
           </tr>

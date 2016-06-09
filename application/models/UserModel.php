@@ -54,12 +54,16 @@ class UserModel extends CI_Model
 
       return $query->result();
     }
+
+
     function preview_record(){
 
       $this->db->where('idNews', $this->uri->segment(3));
       $query=$this->db->get('fs_news');
       return $query->result();
     }
+
+
     function edit_record(){
 
       $this->db->where('idNews', $this->uri->segment(3));
@@ -68,6 +72,7 @@ class UserModel extends CI_Model
 
     }
 
+
     function update_record($data)
     {
         
@@ -75,6 +80,9 @@ class UserModel extends CI_Model
         
         $this->db->update('fs_news', $data);
     }
+
+
+
     function search_news($search_this)
     {
         $this->db->select('idNews,title,datePublication,idState');
@@ -116,10 +124,11 @@ class UserModel extends CI_Model
 
     function userID_model()
     {
-      $this->db->where('username',$this->uri->segment(3));
-      $query = $this->db->get('fs_user');
-
-      return $query->result();
+      
+        $this->db->select( 'fs_news.idNews,fs_news.title, fs_news.datePublication, fs_state.description');
+        $this->db->from('fs_news');
+        $this->db->join('fs_state', 'fs_news.idState = fs_state.idState');
+        return $this->db->get();
 
       
     }

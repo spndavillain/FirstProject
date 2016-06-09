@@ -1,9 +1,9 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-/**
-* Mastering the login
-*/
+  /*************************************************************
+   **             USING 'M' INPLACE OF MODEL                  **
+   *************************************************************/
 
 class MainController extends CI_Controller
 {
@@ -13,30 +13,27 @@ class MainController extends CI_Controller
     $this->load->model('userModel','m');
   }
 
+
+  /*************************************************************
+   **             DISPLAY THE DEFAULT PAGE [LOGIN]            **
+   *************************************************************/
+
   public function index()
   {
-    $this->load->view('header');
-    $this->load->view('login');
-    $this->load->view('footer');
+    if($this->session->userdata('username') != null)
+        redirect('MainController/admin');
 
+    else 
+    {
+        $this->load->view('header');
+        $this->load->view('login');
+        $this->load->view('footer');  
+    }
   }
 
-  //  MY MAIN PAGE WHEN I LOG IN
-
-  public function admin()
-  {
-    if($this->session->userdata('username') == null)
-        redirect('MainController');
-
-        $data['user'] = $this->m->get_user();
-        $data['username']=$this->session->userdata('username');
-        $data['state'] = $this->m->mystate();
-
-        $data['author'] = $this->m->author($data);
-
-        $this->load->view('Admin',$data);
-
-  }
+  /*************************************************************
+   **           CHECKING CREDENTIALS ON LOGIN                 **
+   *************************************************************/
 
   public function login()
     {
@@ -70,31 +67,50 @@ class MainController extends CI_Controller
 
     }
 
+  /*************************************************************
+   **           MY MAINPAGE AND START OF A SESSION            **
+   *************************************************************/
+
+  public function admin()
+  {
+
+    if($this->session->userdata('username') == null)
+        redirect('MainController');
+
+        $data['user'] = $this->m->get_user();
+        $data['username']=$this->session->userdata('username');
+        $data['state'] = $this->m->mystate();
+        $data['author'] = $this->m->author($data);
+
+        
+        $this->load->view('Admin',$data);
+        
+  }
+
+  /*************************************************************
+   **           DESTROY SESSION ON LOGOUT                     **
+   *************************************************************/
+
      function logout()
     {
       $this->session->sess_destroy();
       redirect('MainController');
     }
 
-  
+  /*************************************************************
+   **           WHEN ADDING A NEW NEWS [ARTICLE]              **
+   *************************************************************/
   
   public function submit()
   {
-      $this->form_validation->set_rules('title', 'Title', 'required');
-      $this->form_validation->set_rules('textcontent', 'Content', 'required');
-      $this->form_validation->set_rules('datePublication', 'Date', 'required');
-      $this->form_validation->set_rules('idState', 'State', 'required');
 
-                if ($this->form_validation->run() == FALSE)
-                {
-                        $this->load->view('admin');
-                }
-                else
-                {
-                        $this->m->submit();
-                }
+       $this->load->view('admin');
 
   }
+
+  /*************************************************************
+   **               DELETING NEWS [ARTICLE]                   **
+   *************************************************************/
 
   function delete()
   {
@@ -104,7 +120,10 @@ class MainController extends CI_Controller
 
   }
 
-  
+  /*************************************************************
+   **                   VIEW NEWS [ARTICLE]                   **
+   *************************************************************/
+
   function preview()
   {
 
@@ -119,6 +138,10 @@ class MainController extends CI_Controller
 
   }
 
+  /*************************************************************
+   **       DISPLAY INFORMATION INSIDE <INPUT><TEXTAREA>      **
+   *************************************************************/
+
   function edit(){
     
     if($data = $this->UserModel->edit_record())
@@ -131,6 +154,9 @@ class MainController extends CI_Controller
 
   }
 
+  /*************************************************************
+   **  TAKE INFORMATION FROM EDIT AND UPDATE IT TO DATABASE   **
+   *************************************************************/
 
 
   function update(){
@@ -149,6 +175,9 @@ class MainController extends CI_Controller
     redirect('MainController/admin','refresh');
   }
 
+  /*************************************************************
+   **           SEARCHING AND DISPLAYING VIA AJAX             **
+   *************************************************************/
 
   function searchAjax()
   {
@@ -158,21 +187,10 @@ class MainController extends CI_Controller
                   'idState'           => $this->input->post('idState'));
 
       $search['news'] = $this->m->search_news($search_this);
-
+      
       $this->load->view('search_results',$search);
   }
 
-  function admin2()
-  {
-    $this->load->view('Admin2');
-  }
-
-  function userID()
-  {
-
-    $this->load->view('preview', $data);
-  }
-  
 
 
 }
