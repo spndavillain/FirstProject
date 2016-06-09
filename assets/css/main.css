@@ -119,6 +119,10 @@ body {
 }
 
 .well {
-  background-color: perpul;
+  background-color: ;
   border-color: black bold;
+}
+
+.view-details {
+  padding-top: 10px;
 }

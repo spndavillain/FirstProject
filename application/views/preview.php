@@ -1,6 +1,7 @@
 
+<br><br>
 <div class="container">
-      <div class=" well">
+      <div class="view-details well">
         <?php echo form_open(); foreach ($record as $p) {?>
         
             <h1><?= $p->title;?></h1>

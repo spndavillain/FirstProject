@@ -288,7 +288,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <!--|||||||TABS CONTENT ****TWO**** ||||||-->
 
-
+<div><br><br>
 <div id="menu2" class="tab-pane fade previewTab  preview-tab">
 
 
@@ -296,15 +296,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 </div>
-
-<!--|||||||TABS CONTENT ****THREE**** ||||||-->
-
-<div id="menu3" class="tab-pane fade edit-tab">
-
-
-
 </div>
+<!--|||||||TABS CONTENT ****THREE**** ||||||-->
+<div id="menu3" class="tab-pane fade ">
+<br><br>
+    <div class="edit-tab">
+    
 
+
+    </div>
+</div>
 
 
 
