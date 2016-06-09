@@ -1,0 +1,124 @@
+#close {
+  float: right;
+  display: block;
+  margin-right:0px;
+  
+}
+select{
+  display: block;
+  margin-bottom: 20px;
+}
+
+.search {
+
+  display: block;
+  margin-top: 10px;
+  margin-left: 95px;
+  padding-left: 10px;
+}
+.inline h5{
+
+  display: inline;
+  margin-top: 25px;
+  padding-top: 25px;
+
+}
+a {
+  text-decoration: none;
+}
+#box{
+  float: left;
+}
+#wrap {
+  float: right;
+  display: block;
+}
+.login {
+  width: 350px;
+  margin: 300px auto;
+}
+
+.model-body {
+  display: block;
+}
+
+.body-center {
+  width: 500px;
+  margin: 300px auto;
+}
+.mybutton {
+  margin-top: 20px;
+  
+}
+
+hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}
+#buttonposition {
+  margin-left: 560px;
+}
+
+#tab button {
+  margin-left: 750px;
+}
+#search {
+  margin: 1px; 
+}
+
+
+
+
+
+
+.container ul {
+  list-style-type: none;
+}
+
+.table {
+  margin-top: 20px;
+  margin-right: 20px;
+  padding-left: 20px;
+}
+#button {
+  margin-left: 600px;
+}
+
+.button{
+  margin-left: 35em;
+}
+
+.fill {
+  margin-top: 20px;
+}
+.save {
+  margin-top: 20px;
+}
+
+.firstpic {
+  background-image: url('../img/dishonored.png');
+}
+
+.secondpic {
+  background-image: url('../img/mirrorsedge.jpg');
+}
+
+.thirdpic {
+  background-image: url('../img/rx480.jpg');
+}
+
+body {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%),url("../img/background-2.jpg");
+    background-color: #cccccc;
+
+}
+
+.well {
+  background-color: perpul;
+  border-color: black bold;
+}

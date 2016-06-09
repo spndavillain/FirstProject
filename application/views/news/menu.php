@@ -1,0 +1,1 @@
+<p><a href="<?=base_url('index.php/mainController/logout')?>">Logout</a>| <?=$username?></p>
