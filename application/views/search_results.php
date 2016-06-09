@@ -20,15 +20,15 @@
                 <!-- Glyphicon -->
                 <td>
 
-                <a class="preview-link1"  data-action="<?php echo base_url('index.php/MainController/preview')."/".$row->idNews; ?>" onmouseover="" style="cursor: pointer;">View</a>
+                <a class="preview-link"  data-action="<?php echo base_url('index.php/MainController/preview')."/".$row->idNews; ?>" onmouseover="" style="cursor: pointer;">View</a>
 
 
 
-                <a class="edit-link2"  data-action="<?php echo base_url('index.php/MainController/edit')."/".$row->idNews; ?>" onmouseover="" style="cursor: pointer;">Edit</a>
+                <a class="edit-link"  data-action="<?php echo base_url('index.php/MainController/edit')."/".$row->idNews; ?>" onmouseover="" style="cursor: pointer;">Edit</a>
 
 
 
-                <a class="delete-link3" data-action= "<?php echo base_url('index.php/MainController/delete')."/".$row->idNews;?>"onmouseover="" style="cursor: pointer;"> Delete</a>
+                <a class="delete-link" data-action= "<?php echo base_url('index.php/MainController/delete')."/".$row->idNews;?>"onmouseover="" style="cursor: pointer;"> Delete</a>
 
                 </td>
           </tr>
@@ -37,3 +37,4 @@
 
           </tbody>
         </table>
+        <script type="text/javascript" src="<?=base_url('assets/js/script.js')?>"></script>
