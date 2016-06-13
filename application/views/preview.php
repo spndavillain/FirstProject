@@ -12,14 +12,12 @@
         <?php foreach ($state as $key ): ?>
 
         <p>
-          <label for="idState">State: <?=$state->$description?></label>
+          <label for="idState">State: <?=;?></label>
         </p>
         <?php endforeach ?>
          <label>The Author is <?=  $p->idUser; ?></label>
 
         <?php } echo form_close();?>
-        
-
         
 
       </div>

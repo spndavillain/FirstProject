@@ -80,7 +80,7 @@ class MainController extends CI_Controller
         $data['user'] = $this->m->get_user();
         $data['username']=$this->session->userdata('username');
         $data['state'] = $this->m->mystate();
-        $data['noticestate'] = $this->m->statenotice();
+        $data['noticestate'] = $this->m-> userID_model();
         $data['author'] = $this->m->author($data);
 
         
@@ -104,7 +104,7 @@ class MainController extends CI_Controller
   
   public function submit()
   {
-
+       $this->m->submit();
        $this->load->view('admin');
 
   }
@@ -134,7 +134,8 @@ class MainController extends CI_Controller
       
       $preview_v['user'] = $this->m->userID_model($preview_v);
     }
-    $preview_v['state'] = $this->m->statenotice();
+    $preview_v['state'] = $this->m->userID_model();
+    die(print_r($preview_v['state']));
     $this->load->view('preview',$preview_v);
 
   }

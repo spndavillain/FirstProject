@@ -128,18 +128,9 @@ class UserModel extends CI_Model
         $this->db->select( 'fs_news.idNews,fs_news.title, fs_news.datePublication, fs_state.description');
         $this->db->from('fs_news');
         $this->db->join('fs_state', 'fs_news.idState = fs_state.idState');
+
         return $this->db->get();
-
       
-    }
-    
-
-    function statenotice()
-    {
-      $this->db->select('fs_news.idNews, fs_news.title, fs_news.datePublication, fs_state.description');
-      $this->db->from('fs_news');
-      $this->db->join('fs_state', 'fs_news.idState = fs_state.idState');
-      return $this->db->get();
     }
 
 
