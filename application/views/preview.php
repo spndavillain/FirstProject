@@ -8,10 +8,15 @@
         <p>
           <?= $p->content;?>
         </p>
+        
+        <?php foreach ($state as $key ): ?>
+
         <p>
-          <label for="idState">State: <?=($p->idState)? "Published" : "unPublished";?></label>
+          <label for="idState">State: <?=$state->$description?></label>
         </p>
-        <label>The Author is <?=  $p->idUser; ?></label>
+        <?php endforeach ?>
+         <label>The Author is <?=  $p->idUser; ?></label>
+
         <?php } echo form_close();?>
         
 
