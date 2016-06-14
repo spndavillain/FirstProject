@@ -80,7 +80,7 @@ class MainController extends CI_Controller
         $data['user'] = $this->m->get_user();
         $data['username']=$this->session->userdata('username');
         $data['state'] = $this->m->mystate();
-        $data['noticestate'] = $this->m-> userID_model();
+        
         $data['author'] = $this->m->author($data);
 
         
@@ -127,15 +127,13 @@ class MainController extends CI_Controller
 
   function preview()
   {
-
+    $preview_v['record'] = $this->m->statedisplay();
+    
     if($data = $this->UserModel->preview_record())
     {
       $preview_v['record'] = $data;
-      
-      $preview_v['user'] = $this->m->userID_model($preview_v);
     }
-    $preview_v['state'] = $this->m->userID_model();
-    die(print_r($preview_v['state']));
+
     $this->load->view('preview',$preview_v);
 
   }

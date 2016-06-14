@@ -122,16 +122,15 @@ class UserModel extends CI_Model
       return $query->result();
     }
 
-    function userID_model()
+    
+
+    function statedisplay()
     {
-      
-        $this->db->select( 'fs_news.idNews,fs_news.title, fs_news.datePublication, fs_state.description');
-        $this->db->from('fs_news');
-        $this->db->join('fs_state', 'fs_news.idState = fs_state.idState');
+      $this->db->select('fsn.idNews, fsn.title, fsn.datePublication, fss.description');
+      $this->db->from('fs_news fsn');
+      $this->db->join('fs_state fss', 'fss.idState = fsn.idState','left');
+      $query = $this->db->get();
 
-        return $this->db->get();
-      
+      return $query->result();
     }
-
-
 }

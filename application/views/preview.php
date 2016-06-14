@@ -8,18 +8,11 @@
         <p>
           <?= $p->content;?>
         </p>
-        
-        <?php foreach ($state as $key ): ?>
-
         <p>
-          <label for="idState">State: <?=;?></label>
+        <label>State: <?=$p->description?></label>
         </p>
-        <?php endforeach ?>
-         <label>The Author is <?=  $p->idUser; ?></label>
-
         <?php } echo form_close();?>
-        
-
       </div>
 
 </div>
+

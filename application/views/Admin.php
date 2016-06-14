@@ -47,9 +47,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <li>
                         <a href="#">Hello <?=$username?></a>
                     </li>
-                    <li>
-                        <a href="#">Contact Us</a>
-                    </li>
                     
                     <li>
                         <a href="<?=base_url('index.php/MainController/logout')?>">Logout</a>         <!--Make a pop to show email -->
